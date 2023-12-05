@@ -67,13 +67,12 @@ static MunitResult test_pallete_compare(
         pallete_init(&p1, true);
         pallete_init(&p2, true);
 
-        //pallete_add(&p1, BLUE);
-        //pallete_add(&p1, RED);
         munit_assert(pallete_compare(&p1, &p2));
 
         pallete_shutdown(&p2);
         pallete_shutdown(&p1);
     }
+
     return MUNIT_OK;
 }
 
