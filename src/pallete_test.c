@@ -2,7 +2,8 @@
 // vim: fdm=marker
 
 // {{{ include
-#include "koh.h"
+#include "koh_pallete.h"
+#include <stdbool.h>
 #include "koh_common.h"
 #include "koh_pallete.h"
 #include "koh_set.h"
@@ -164,5 +165,6 @@ static const MunitSuite suite_root = {
 };
 
 int main(int argc, char **argv) {
+    koh_hashers_init();
     return munit_suite_main(&suite_root, (void*) "µnit", argc, argv);
 }
